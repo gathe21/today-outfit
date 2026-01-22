@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>오늘 뭐 입지?</title>
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="splash-screen"><h1>오늘 뭐 입지?</h1></div>
+
+    <div class="app-container">
+        <header>
+            <div class="top-bar">
+                <div>
+                  <span id="date">-- --</span>
+                  <span id="location">로딩 중...</span>
+                </div>
+                <button id="refresh-btn" title="새로고침">
+                    <span class="refresh-icon">🔄</span>
+                    <span class="refresh-text">새로고침</span>
+                </button>
+            </div>
+            <div class="weather-main">
+                <h2 id="temp-display">--°</h2>
+                <p>체감온도 <span id="feels-like">--</span>°</p>
+            </div>
+        </header>
+
+        <nav class="gender-tabs">
+            <button class="tab-btn active" data-gender="mens">MENS</button>
+            <button class="tab-btn" data-gender="womens">WOMENS</button>
+        </nav>
+
+        <section class="forecast-section">
+            <canvas id="forecastChart"></canvas>
+        </section>
+
+        <section class="outfit-section">
+            <h3>추천 코디</h3>
+            <div id="outfit-gallery" class="outfit-gallery"></div>
+        </section>
+
+        <footer class="index-grid">
+            <div class="idx-item"><span>🧺 세탁</span><strong id="laundry-idx">-</strong></div>
+            <div class="idx-item"><span>☂️ 우산</span><strong id="umbrella-idx">-</strong></div>
+            <div class="idx-item"><span>💨 바람</span><strong id="wind-idx">-</strong></div>
+        </footer>
+    </div>
+    <script src="./resources/js/script.js"></script>
+</body>
+</html>

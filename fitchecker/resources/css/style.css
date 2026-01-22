@@ -1,0 +1,77 @@
+:root {
+  --bg-dark: #121212;         /* 배경 */
+  --card-dark: #1e1e1e;       /* 카드 배경 */
+  --point-color: #bb86fc;     /* 포인트 보라색 */
+  --text-primary: #ffffff;     /* 메인 텍스트 */
+  --text-secondary: #b0b0b0;   /* 서브 텍스트 */
+  --accent-blue: #03dac6;      /* 강조 민트색 */
+}
+
+body {
+  margin: 0; padding: 0; font-family: -apple-system, sans-serif;
+  background-color: var(--bg-dark); color: var(--text-primary);
+}
+
+#splash-screen {
+  position: fixed; top:0; left:0; width:100%; height:100%;
+  background: var(--bg-dark); color: var(--point-color);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100; transition: opacity 0.5s ease;
+}
+
+.app-container { max-width: 480px; margin: 0 auto; padding: 20px; }
+
+.top-bar { display: flex; align-items: center; justify-content: space-between; }
+
+/* 새로고침 버튼 스타일 강화 */
+#refresh-btn {
+  background: var(--card-dark);
+  border: 1px solid var(--point-color);
+  color: var(--point-color);
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+#refresh-btn:hover { background: var(--point-color); color: white; }
+.refresh-text { font-size: 0.8rem; }
+
+.weather-main { text-align: center; padding: 30px 0; }
+.weather-main h2 { font-size: 5.5rem; margin: 0; font-weight: 800; color: var(--accent-blue); }
+
+.gender-tabs { display: flex; gap: 10px; margin: 20px 0; }
+.tab-btn {
+  flex: 1; padding: 14px; border: 1px solid #333; border-radius: 12px;
+  background: var(--card-dark); color: var(--text-secondary); font-weight: bold; cursor: pointer;
+}
+.tab-btn.active { background: var(--point-color); color: var(--bg-dark); border-color: var(--point-color); }
+
+.forecast-section { height: 130px; margin-bottom: 30px; }
+
+/* 카드 디자인 수정 */
+.outfit-card {
+  background: var(--card-dark); border-radius: 15px;
+  display: flex; overflow: hidden; margin-bottom: 12px;
+  transition: 0.2s; cursor: pointer; border: 1px solid #2c2c2c;
+}
+.outfit-card:hover { border-color: var(--accent-blue); transform: scale(1.02); }
+
+.color-block {
+  width: 60px; min-width: 60px; height: 90px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem; font-weight: bold; writing-mode: vertical-rl;
+  color: rgba(255,255,255,0.3);
+}
+
+.outfit-text-area { display: flex; flex-direction: column; justify-content: center; padding: 15px; }
+.outfit-text-area h3 { margin: 0 0 5px 0; font-size: 1.1rem; color: var(--text-primary); }
+.outfit-text-area p { margin: 0; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; }
+
+.index-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 30px; }
+.idx-item { background: var(--card-dark); padding: 15px; border-radius: 15px; text-align: center; border: 1px solid #2c2c2c; }
+.idx-item span { display: block; font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 5px; }
+.idx-item strong { color: var(--accent-blue); }
