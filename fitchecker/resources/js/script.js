@@ -1,6 +1,6 @@
 
 // const API_KEY = '3673251fc606677d01d586e7320583bc';
-const API_KEY = '70d2cbfccc6d432af28fb727e5b816f5';
+let API_KEY = '70d2cbfccc6d432af28fb727e5b816f5';
 const msBase = "https://www.musinsa.com/search/goods?keyword=";
 let currentGender = 'mens';
 let myChart = null;
@@ -247,3 +247,5 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 document.getElementById('refresh-btn').onclick = init;
 window.onload = init;
+
+API_KEY = '';
